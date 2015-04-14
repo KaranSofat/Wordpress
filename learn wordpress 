@@ -1,0 +1,50 @@
+<!-------------------------------------------------Theme Integration--------------------------------------------------->
+Main Files are:
+1)header.php:Here We define the all of navigation bar
+2)index.php:Here is we define all html
+3)footer.php: Here we define the footer of website
+ For Dynamic call of navigation:
+<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav' ) ); ?>
+
+For Call Image:
+ <img src="<?php bloginfo('stylesheet_directory'); ?>/images/email_icon.png"
+
+For Call Css and js:
+<link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
+<!----------------------------------------------------Theme Integration---------------------------------------------------->
+
+<!------------------------------------Categories and posts--------------------------------------------------------------->
+
+Create Category with their name
+
+Create Post under that Category
+
+Call Category with Post:
+
+ <?php
+
+		query_posts('pricing=categoryName&showposts=10');
+
+		while ( have_posts() ) : the_post();
+	?> 
+call category Image:<?php the_post_thumbnail(); ?>
+call category title:<?php the_title(); ?>
+call category content:<?php the_content(); ?>
+<!------------------------------------Categories and posts--------------------------------------------------------------->
+<!------------------------------------Categories and posts--------------------------------------------------------------->
+For use plugin:
+<?php echo do_shortcode('[contact-form-7 id="50" title="Contact form 1"]'); ?>
+<!------------------------------------Categories and posts--------------------------------------------------------------->
+<!---------------Working with pages------------------------------------>
+
+
+
+
+<!---------------Working with pages------------------------------------>
+
+
+
+
+
+
+
